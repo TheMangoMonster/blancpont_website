@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import "./stylesheets/GlobalStyles.css";
+
+/*Page imports*/
+import Home from "./pages/Home";
+import NoPage from "./pages/NoPage";
+import LogoAnimation from "./components/LogoAnimation";
 
 function App() {
+  const [isLogoAnimationComplete, setLogoAnimationComplete] = useState(false);
+
+  const handleLogoAnimationComplete = () => {
+    setTimeout(() => {
+      setLogoAnimationComplete(true);
+    }, 1000);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!isLogoAnimationComplete && (
+        <LogoAnimation onLogoLoad={handleLogoAnimationComplete} />
+      )}
+      <Header />
+
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+    </>
   );
 }
 
