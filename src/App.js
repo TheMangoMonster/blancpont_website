@@ -24,12 +24,14 @@ function App() {
       )}
       <Header />
 
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NoPage />} />
-      </Routes>
+      {isLogoAnimationComplete && (
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      )}
     </>
   );
 }
