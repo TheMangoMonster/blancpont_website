@@ -1,7 +1,7 @@
 <h1 align="center">BlancPont - Culinary Photography Showcase</h1>
 
 <p align="center">
-  <img src="%PUBLIC_URL%/icons/logo.svg" alt="Project Screenshot">
+  <img src="https://github.com/TheMangoMonster/blancpont_website/blob/main/public/icons/logo.svg" alt="Project Screenshot">
 </p>
 
 <p align="center">
