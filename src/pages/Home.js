@@ -7,7 +7,6 @@ function Home() {
   const [showReplacement, setShowReplacement] = useState(false);
 
   const handleSlideshowFinish = () => {
-    // Slideshow finished, show the replacement component
     setShowReplacement(true);
   };
 
@@ -27,9 +26,24 @@ function Home() {
           />
         </div>
       ) : (
-        <div className="gallery-container">
-          <Gallery />
-        </div>
+        <>
+          <div className="gallery-container">
+            <Gallery />
+          </div>
+          <div className="text-container">
+            <h1>
+              You are one click away from world class pictures of your food and
+              drinks
+            </h1>
+            <div className="quote-button">
+              <a href="#quote" className="get-quote-button">
+                Get a Quote
+                <span className="button-background"></span>
+                <span className="camera-icon"></span>
+              </a>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

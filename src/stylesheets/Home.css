@@ -1,16 +1,8 @@
 .home {
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #f5f5f5;
-}
-
-.home-content {
-  max-width: 1200px;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .fade-out-in {
@@ -20,4 +12,73 @@
 
 .gallery-container {
   padding: 5vh 20vw;
+}
+
+.text-container {
+  padding: 5vh 20vw;
+}
+
+h1 {
+  font-size: x-large;
+  text-align: center;
+}
+
+.get-quote-button {
+  z-index: 3;
+  display: inline-block;
+  position: relative;
+  margin: 5vh 0;
+  padding: 10px 20px;
+  background-color: #ae1616;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-quote-button:hover {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+.get-quote-button:hover .camera-icon {
+  top: -55px;
+}
+
+.get-quote-button:hover .button-background {
+  background-color: #cc0000;
+}
+
+.button-background {
+  z-index: -1;
+  display: block;
+  position: absolute;
+  background-color: #ae1616;
+  top: 0%;
+  width: 160px;
+  height: 57px;
+  transition: background-color 0.3s ease;
+}
+
+.camera-icon {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 57px;
+  background-image: url("https://www.pngkit.com/png/full/98-984699_pentax-k1000.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: top 0.3s ease;
+  z-index: -2;
+}
+
+.quote-button {
+  text-align: center;
+  margin-top: 20px;
 }
