@@ -1,7 +1,23 @@
-.gallery-container {
-  padding: 5vh 20vw;
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
+
+.home-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .fade-out-in {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-container {
+  padding: 5vh 20vw;
 }

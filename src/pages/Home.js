@@ -14,16 +14,18 @@ function Home() {
   return (
     <div className="home">
       {!showReplacement ? (
-        <Slideshow
-          images={[
-            process.env.PUBLIC_URL + "/images/homeanimation/you.png",
-            process.env.PUBLIC_URL + "/images/homeanimation/need.png",
-            process.env.PUBLIC_URL + "/images/homeanimation/photos.png",
-            process.env.PUBLIC_URL + "/images/homeanimation/like.png",
-            process.env.PUBLIC_URL + "/images/homeanimation/this.png",
-          ]}
-          onFinish={handleSlideshowFinish}
-        />
+        <div>
+          <Slideshow
+            images={[
+              process.env.PUBLIC_URL + "/images/homeanimation/you.png",
+              process.env.PUBLIC_URL + "/images/homeanimation/need.png",
+              process.env.PUBLIC_URL + "/images/homeanimation/photos.png",
+              process.env.PUBLIC_URL + "/images/homeanimation/like.png",
+              process.env.PUBLIC_URL + "/images/homeanimation/this.png",
+            ]}
+            onFinish={handleSlideshowFinish}
+          />
+        </div>
       ) : (
         <div className="gallery-container">
           <Gallery />
